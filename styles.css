@@ -1,0 +1,199 @@
+/* General Reset */
+body {
+font-family: Arial, sans-serif;
+background-image: url(oceanbackground.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+background-color: black;
+margin: 0;
+padding: 0;
+}
+
+/* Header Styles */
+header a{
+    color: white;
+    padding: 5px;
+}
+
+header {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white;
+    padding: 20px; 
+    background-image: url(navybg.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 150px; 
+    text-decoration: none;
+    flex-wrap: nowrap;
+}
+
+header .logo {
+    position: absolute; 
+    left: 20px; 
+    top: 10%;
+    transform: translateY(-50%);
+}
+
+header .logo img{
+    max-height: 95px;
+    width: auto;
+}
+
+header .header-text {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+header .header-text h1 {
+    color: white;
+    font-size: 24px;
+    margin: 100;
+}
+
+header .logout {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to top,#00c8fa, #008eec);
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    right: 30px;
+    transition: background-color 5.3s ease;
+    }
+
+.logout:hover {
+    background: linear-gradient(to right, red, darkred);
+
+
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        height: auto;
+        padding: 20px; 
+    }
+    header .logo {
+        position: static; 
+        transform: none; 
+        margin-bottom: 10px; 
+    }
+    header .header-text {
+        margin-left: 0; 
+        text-align: center; 
+    }
+    header .header-text h1 {
+        font-size: 20px;
+    }
+}
+
+nav {
+    background: linear-gradient(to right, rgb(0, 142, 224), rgb(0, 79, 124), rgb(0, 50, 78));
+    overflow: hidden;
+}
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.35s;
+}
+
+nav a:hover {
+    background-color: #003e68;
+}
+
+/* Main Content Styles */
+main {
+    background-image: url("ocean.jpg");
+    padding: 50px;
+    display: fixed;
+}
+
+/* Gallery Section */
+.gallery {
+    width: 90%;
+    padding: 20px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    justify-content: center;
+}
+
+.box {
+    width: 300px;
+    margin: 0 10px;
+    transition: 0.5s;
+
+}
+.gallery img {
+    display: block;
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.box:hover {
+    transform:scale(1.20);
+    z-index: 2;
+
+
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(to right, rgb(0, 142, 224), rgb(0, 79, 124), rgb(0, 50, 78));
+    color: white;
+     text-align: center;
+     padding: 10px 0;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+}
+
+/* Active Navigation Link */
+nav a.active {
+     background-color: #e76f51;
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.image-item {
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
